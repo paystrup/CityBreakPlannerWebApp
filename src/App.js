@@ -7,6 +7,8 @@ import MyTrips from './pages/MyTrips';
 import BottomBar from './components/BottomBar';
 import NavTopBar from './components/NavTopBar';
 import SearchPage from './pages/SearchPage';
+import CityPage from './pages/CityPage';
+import Restaurantpage from './pages/Restaurantpage';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/trips" element={<MyTrips/>} />
+        <Route path="/city/:slug" element={<CityPage/>} />
+        <Route path="/city/:slug/restaurants" element={<Restaurantpage/>} />
         <Route path="/search" element={<SearchPage/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

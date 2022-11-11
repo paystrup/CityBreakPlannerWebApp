@@ -2,6 +2,7 @@ import React from 'react'
 import Citycard from '../components/CityCards'
 import LandingHeader from '../components/LandingHeader'
 import LandingSwiper from '../components/LandingSwiper'
+import LandingTitleAndCard from '../components/Landingtitles'
 
 export default function LandingPage() {
     // for language implementation
@@ -29,6 +30,9 @@ export default function LandingPage() {
                 Gå på opdagelse i Danmarks perler
             </h2>
             <LandingSwiper/>
+        </section>
+        <section>
+            <LandingTitleAndCard />
         </section>
     </section>
   )

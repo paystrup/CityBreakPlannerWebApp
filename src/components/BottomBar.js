@@ -18,6 +18,13 @@ export default function BottomBar() {
         <li className="text-primaryGray-900">
           <NavLink to="/" end className='flex flex-col items-center gap-1'>
             <HomeIcon className="h-7 w-7"/>
+            <p>Hjem</p>
+          </NavLink>
+        </li>
+
+        <li className="text-primaryGray-900">
+          <NavLink to="/search" className='flex flex-col items-center gap-1'>
+            <MagnifyingGlassIcon className="h-7 w-7"/>
             <p>Udforsk</p>
           </NavLink>
         </li>
@@ -28,13 +35,7 @@ export default function BottomBar() {
             <p>Mine ture</p>
           </NavLink>
         </li>
-
-        <li className="text-primaryGray-900">
-          <NavLink to="/search" className='flex flex-col items-center gap-1'>
-            <MagnifyingGlassIcon className="h-7 w-7"/>
-            <p>Søg</p>
-          </NavLink>
-        </li>
+        
       </ul>
     </div>
   );
