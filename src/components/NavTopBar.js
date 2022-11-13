@@ -3,7 +3,8 @@ import logo from '../assets/svg/logoBigBlue.svg'
 import dkFlag from '../assets/svg/flags/dk.svg'
 import engFlag from '../assets/svg/flags/eng.svg'
 import gerFlag from '../assets/svg/flags/ger.svg'
-import {XMarkIcon} from "@heroicons/react/24/outline"
+import { XMarkIcon } from "@heroicons/react/24/outline"
+import { Link } from "react-router-dom";
 
 export default function NavTopBar() {
     const [show, setShow] = useState(false);
@@ -35,7 +36,10 @@ export default function NavTopBar() {
 
     return (
         <nav className='px-6 py-5 flex justify-between items-center'>
-            <img src={logo} alt="Visit Denmark Logo" className='w-2/4'></img>
+            <Link to="/">
+                <img src={logo} alt="Visit Denmark Logo" className='w-2/4'></img>
+            </Link>
+            
             {language === "dk" && 
                 <button className='w-7 h-7 rounded-full' 
                 style={{ 
