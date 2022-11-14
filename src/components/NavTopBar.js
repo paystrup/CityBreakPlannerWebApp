@@ -41,7 +41,7 @@ export default function NavTopBar() {
             </Link>
             
             {language === "dk" && 
-                <button className='w-7 h-7 rounded-full' 
+                <button className='w-6 h-6 rounded-full' 
                 style={{ 
                     backgroundImage: `url(${dkFlag})`,
                     backgroundPosition: "top",

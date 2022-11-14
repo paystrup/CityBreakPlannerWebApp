@@ -5,12 +5,13 @@ import imagePlaceholder2 from "../assets/images/placeholder1.jpg";
 import imagePlaceholder3 from "../assets/images/placeholder2.jpg";
 import imagePlaceholder4 from "../assets/images/placeholder3.jpg";
 import imagePlaceholder5 from "../assets/images/placeholder4.jpg";
+import { BriefcaseIcon } from "@heroicons/react/24/outline"
 
 export default function RestaurantSektion() {
     const [places, setPlaces] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-    const [visible, setVisible] = useState(10);
+    const [visible, setVisible] = useState(5);
 
     // show more btn adds 4 more articles by adding 4 to prev value
     const showMoreRestaurants = () => {
@@ -76,7 +77,7 @@ export default function RestaurantSektion() {
                         <div
                             className="h-44 w-full"
                             style={{
-                                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0) 6%, rgba(0,0,0,0) 100%), url(${Files[0] ? Files[0].Uri : (() => getRandomPlaceholder.toString())})`,
+                                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%), url(${Files[0] ? Files[0].Uri : imagePlaceholder2})`,
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
                                 backgroundRepeat: "no-repeat",
@@ -85,6 +86,11 @@ export default function RestaurantSektion() {
                                 outlineOffset: "-12px"
                             }} 
                         >
+                        <div className="font-visitdkBold flex flex-col justify-between px-5 py-5 w-full">
+                            <div className="flex self-end drop-shadow-lg">
+                                <BriefcaseIcon className="h-8 w-8 text-white"/> 
+                            </div>
+                </div>
                             
                         </div>
                         

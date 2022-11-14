@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CityPageHeader from "../components/CityPageHeader";
 import CitySwiper from "../components/CitySwiper";
+import CityPageExplore from "../components/CityPageExplore";
 import RestaurantTeaser from "../components/RestaurantTeaser";
 
 export default function CityPage() {
@@ -29,6 +30,7 @@ export default function CityPage() {
         <div>
             <CityPageHeader />
             <CitySwiper />
+            <CityPageExplore />
             <RestaurantTeaser citySlug={slug}/>
         </div>
     )
