@@ -9,7 +9,10 @@ import "swiper/css";
 import { Keyboard, Mousewheel, Pagination } from "swiper";
 
 // images for cards
-import image from "../assets/images/tivoli.webp"
+import transportImage from "../assets/images/letbanen.webp"
+import cityCardImage from "../assets/images/aarhuscard.jpg"
+import turistInfoImage from "../assets/images/turistinfo.webp"
+import faqImage from "../assets/images/faq.png"
 
 import { useNavigate } from "react-router-dom";
 
@@ -22,25 +25,25 @@ export default function LandingSmallCarousel() {
     {
       id: 1,
       title: "Transport",
-      image: `${image}`,
+      image: `${transportImage}`,
       slug: "Aarhus"
     },
     {
       id: 2,
       title: "CityCard",
-      image: `${image}`,
+      image: `${cityCardImage}`,
       slug: "Aarhus"
     },
     {
       id: 3,
       title: "Turistinfo",
-      image: `${image}`,
+      image: `${turistInfoImage}`,
       slug: "Aarhus"
     },
     {
       id: 4,
       title: "FAQ",
-      image: `${image}`,
+      image: `${faqImage}`,
       slug: "Aarhus"
     }
   ];
@@ -48,9 +51,8 @@ export default function LandingSmallCarousel() {
   return (
     <section className='smallSwiper'>
       <Swiper       
-        spaceBetween={15}
-        slidesPerView={2}
-        centeredSlides={true}
+        spaceBetween={14}
+        slidesPerView={2.3}
         grabCursor={true}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
@@ -66,8 +68,8 @@ export default function LandingSmallCarousel() {
         breakpoints={{
           // when window width is >= 1px
           1: {
-            slidesPerView: "auto",
-            initialSlide: 1,
+            slidesPerView: "2.3",
+            initialSlide: 0,
           },
           // when window width is >= 768px
           960: {
@@ -79,7 +81,7 @@ export default function LandingSmallCarousel() {
         {slideData.map(({id, title, image, slug}) => 
           <SwiperSlide  
             style={{
-              backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9248074229691877) 6%, rgba(0,0,0,0) 100%), url(${image})`,
+              backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.5) 6%, rgba(0,0,0,0) 100%), url(${image})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -90,9 +92,9 @@ export default function LandingSmallCarousel() {
             onClick={() => navigate("/city/" + slug)}
             className="smallSwiper"
           >
-            <div className="font-visitdkBold flex flex-col justify-center items-center px-2 py-2 w-full">
+            <div className="font-visitdkSemiBold flex flex-col justify-center items-center px-2 py-2 w-full">
               <div className="flex-col flex gap-1">
-                <h3 className="text-2xl">{title}</h3>
+                <h3 className="text-xl drop-shadow-lg">{title}</h3>
               </div>  
             </div>
         </SwiperSlide>

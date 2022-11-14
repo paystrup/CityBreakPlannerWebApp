@@ -14,13 +14,13 @@ import { useState } from "react";
 function App() {
   // state for loading animation
   const [loading, setLoading] = useState(true);
-  // loader div is inserted into index.html, timeout/hide after 2000ms and show root
+  // loader div is inserted into index.html, timeout/hide after 1000ms and show root
   const loader = document.getElementById("loader");
   if (loader) {
     setTimeout(() => {
       loader.style.display = "none";
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }
 
   return (

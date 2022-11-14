@@ -54,7 +54,7 @@ export default function LandingSwiper() {
   return (
     <section>
       <Swiper       
-        spaceBetween={20}
+        spaceBetween={15}
         slidesPerView={1.15}
         centeredSlides={true}
         grabCursor={true}
@@ -72,7 +72,7 @@ export default function LandingSwiper() {
         breakpoints={{
           // when window width is >= 1px
           1: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.15,
             initialSlide: 0,
           },
           // when window width is >= 768px

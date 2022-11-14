@@ -109,7 +109,6 @@ code {
   background-color: white !important;
 }
 
-
 .swiper-container {
   width: 100%;
 }
@@ -129,7 +128,7 @@ code {
 .smallSwiper .swiper-slide {
   /* Center slide text vertically */
   display: flex;
-  min-height: 8rem;
+  min-height: 7rem;
   color: white;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -137,9 +136,15 @@ code {
   padding-top: 1rem;
 }
 
-.smallSwiper .swiper-container {
-  width: 100%;
-  height: 100%;
+.smallSwiper .swiper-slide:first-child {
+  margin-left: 1.5rem;
 }
+
+/* restaurant page*/
+.restaurantDesc{
+  max-width: 60ch;
+}
+
+
 
 

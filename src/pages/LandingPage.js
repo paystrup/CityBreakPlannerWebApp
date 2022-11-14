@@ -27,7 +27,7 @@ export default function LandingPage() {
         <CityCards />
 
         <section className='py-8'>
-            <h2 className='text-2xl font-visitdkExtraBold px-6 pb-4'>
+            <h2 className='text-2xl font-visitdkBold px-6 pb-4'>
                 Gå på opdagelse i Danmarks perler
             </h2>
             <LandingSwiper/>
@@ -36,7 +36,7 @@ export default function LandingPage() {
         <LandingTitleAndCard />
 
         <section className='py-8'>
-            <h2 className='text-2xl font-visitdkExtraBold px-6 pb-4'>
+            <h2 className='text-2xl font-visitdkBold px-6 pb-4'>
                 Hvor, hvad og hvordan?
             </h2>
             <WhereWhen />

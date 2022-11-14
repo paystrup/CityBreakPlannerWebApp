@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 
 export default function LandingTitleAndCard() {
   return (
-    <section className='py-8 px-6 pb-20'>
+    <section className='py-8 px-6 mb-4'>
         <h1 className='uppercase font-visitdkExtraBold text-3xl text-primaryBlue pb-7'>
             <span className='font-visitdkOutlineMedium'>Nu er det jul igen</span> og julen varer lige til påske
         </h1>
@@ -13,8 +13,8 @@ export default function LandingTitleAndCard() {
             <p className='font-visitdkBold text-2xl text-primaryBlue'>Julemarkeder</p> 
         </div>
         <div className='w-full h-300 relative mb-8'>
-            <div className="w-full h-60" style={{
-                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9248074229691877) 6%, rgba(0,0,0,0) 100%), url(${image})`,
+            <div className="w-full h-52" style={{
+                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${image})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

@@ -8,10 +8,9 @@ import "swiper/css";
 import { Keyboard, Mousewheel, Pagination } from "swiper";
 
 // images for cards
-import tivoliImage from "../assets/images/tivoli.webp"
-import zooImage from "../assets/images/aalborgzoo.jpg"
+import arosImage from "../assets/images/aarhus.jpeg"
+import gamleByImage from "../assets/images/dengamleby.webp"
 import hcaImage from "../assets/images/hcandersen.jpg"
-import aarhusdomkirkeImage from "../assets/images/aarhusdomkirke.jpg"
 
 import { BriefcaseIcon } from "@heroicons/react/24/outline"
 import { useNavigate } from "react-router-dom";
@@ -23,29 +22,38 @@ export default function CitySwiper() {
   const slideData = [
     {
       id: 1,
-      city: "København",
-      name: "Tivoli",
-      image: `${tivoliImage}`,
+      title: "AroS",
+      image: `${arosImage}`,
       slug: "Aarhus"
     },
     {
       id: 2,
-      city: "Aarhus",
-      name: "Aarhus Domkirke",
-      image: `${aarhusdomkirkeImage}`,
+      title: "Den Gamle By",
+      image: `${gamleByImage}`,
       slug: "Aarhus"
     },
     {
       id: 3,
-      city: "Aalborg",
-      name: "Aalborg Zoo",
-      image: `${zooImage}`,
+      title: "Moesgaard Museum",
+      image: `${gamleByImage}`,
       slug: "Aarhus"
     },
     {
       id: 4,
-      city: "Odense",
-      name: "H.C Andersens Barndomshjem",
+      title: "Tivoli Friheden",
+      image: `${hcaImage}`,
+      slug: "Aarhus"
+    },
+    {
+      id: 5,
+      title: "Den uendelige bro",
+      image: `${hcaImage}`,
+      slug: "Aarhus"
+    }
+    ,
+    {
+      id: 5,
+      title: "Salling Rooftop",
       image: `${hcaImage}`,
       slug: "Aarhus"
     }
@@ -83,7 +91,7 @@ export default function CitySwiper() {
             },
         }}>
 
-            {slideData.map(({id, city, name, image, slug}) => 
+            {slideData.map(({id, title, image, slug}) => 
             <SwiperSlide  
                 style={{
                 backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9248074229691877) 6%, rgba(0,0,0,0) 100%), url(${image})`,
@@ -102,8 +110,7 @@ export default function CitySwiper() {
                     <BriefcaseIcon className="h-8 w-8"/> 
                 </div>
                 <div className="flex-col flex gap-1">
-                    <h3 className="text-2xl">{name}</h3>
-                    <p className="text-l">{'\u2126'}    {city}</p>
+                    <h3 className="text-2xl">{title}</h3>
                 </div>  
                 </div>
             </SwiperSlide>

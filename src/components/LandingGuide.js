@@ -11,8 +11,8 @@ export default function LandingGuide () {
             <p className='font-visitdkBold text-2xl text-primaryBlue'>Online Turistguide</p> 
         </div>
         <div className='w-full h-300 relative mb-8'>
-            <div className="w-full h-60" style={{
-                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9248074229691877) 6%, rgba(0,0,0,0) 100%), url(${image})`,
+            <div className="w-full h-52" style={{
+                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${image})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

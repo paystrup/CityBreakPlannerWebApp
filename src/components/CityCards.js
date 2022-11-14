@@ -44,14 +44,14 @@ export default function CityCards(){
             <div className="w-full grid grid-cols-2 gap-3 font-visitdkSemiBold">
 
                 {cardData.map(({id, city, image, slug}) =>
-                    <div className="w-full h-40 relative hover:opacity-50 transition-opacity cursor-pointer" key={id} onClick={() => navigate("/city/" + slug)}>
-                        <div className="w-full h-40 z-10" style={{
+                    <div className="w-full h-28 relative hover:opacity-50 transition-opacity cursor-pointer" key={id} onClick={() => navigate("/city/" + slug)}>
+                        <div className="w-full h-full z-10 flex items-center justify-center" style={{
                             backgroundImage: `linear-gradient(360deg, rgba(0,0,0,0.3) 6%, rgba(0,0,0,0) 100%),url(${image})`,
                             backgroundPosition: "top",
                             backgroundSize: "cover",
                             backgroundRepeat: "no-repeat",
                         }}>
-                            <p className="px-2 py-2 absolute bottom-0 text-xl text-white">{city}</p>
+                            <p className="px-2 py-2 text-xl text-white drop-shadow-lg">{city}</p>
                         </div>
                     </div>
                 )}
