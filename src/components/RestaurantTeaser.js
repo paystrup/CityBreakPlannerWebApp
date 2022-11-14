@@ -30,9 +30,7 @@ export default function RestaurantTeaser({citySlug}) {
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </section>
     )
 }

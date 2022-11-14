@@ -22,9 +22,40 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>VisitDenmark - City Break Planner</title>
+    <style>
+      .bg-container {
+        align-items: center;
+        background-color: white;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      #loader img{
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- LOADER ANIMATION -->
+    <div id="loader" class="bg-container">
+      <img src="splashLoader.svg" alt="VisitDenmark Logo - The land of everyday wonder">
+    </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.

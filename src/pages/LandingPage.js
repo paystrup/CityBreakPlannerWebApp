@@ -1,8 +1,10 @@
 import React from 'react'
-import Citycard from '../components/CityCards'
+import CityCards from '../components/CityCards'
 import LandingHeader from '../components/LandingHeader'
 import LandingSwiper from '../components/LandingSwiper'
-import LandingTitleAndCard from '../components/Landingtitles'
+import LandingTitleAndCard from '../components/LandingTitleAndCard'
+import WhereWhen from '../components/LandingSmallCarousel'
+import LandingGuide from '../components/LandingGuide'
 
 export default function LandingPage() {
     // for language implementation
@@ -22,18 +24,25 @@ export default function LandingPage() {
   return (
     <section className='bg-white pb-20'>
         <LandingHeader />
+        <CityCards />
+
         <section className='py-8'>
-            <Citycard />
-        </section>
-        <section className='py-8'>
-            <h2 className='text-2xl font-visitdkExtraBold px-6 pb-6'>
+            <h2 className='text-2xl font-visitdkExtraBold px-6 pb-4'>
                 Gå på opdagelse i Danmarks perler
             </h2>
             <LandingSwiper/>
         </section>
-        <section>
-            <LandingTitleAndCard />
+
+        <LandingTitleAndCard />
+
+        <section className='py-8'>
+            <h2 className='text-2xl font-visitdkExtraBold px-6 pb-4'>
+                Hvor, hvad og hvordan?
+            </h2>
+            <WhereWhen />
         </section>
+
+        <LandingGuide />
     </section>
   )
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,54 +9,47 @@ import "swiper/css";
 import { Keyboard, Mousewheel, Pagination } from "swiper";
 
 // images for cards
-import tivoliImage from "../assets/images/tivoli.webp"
-import zooImage from "../assets/images/aalborgzoo.jpg"
-import hcaImage from "../assets/images/hcandersen.jpg"
-import aarhusdomkirkeImage from "../assets/images/aarhusdomkirke.jpg"
+import image from "../assets/images/tivoli.webp"
 
-import { BriefcaseIcon } from "@heroicons/react/24/outline"
 import { useNavigate } from "react-router-dom";
 
-
-export default function LandingSwiper() {
+export default function LandingSmallCarousel() {
+  // all cards redirect to the Aarhus page rn, because we don't have data yet
   const navigate = useNavigate();
+
   // slides array with data for carousel cards (only danish for now)
   const slideData = [
     {
       id: 1,
-      city: "København",
-      name: "Tivoli",
-      image: `${tivoliImage}`,
+      title: "Transport",
+      image: `${image}`,
       slug: "Aarhus"
     },
     {
       id: 2,
-      city: "Aarhus",
-      name: "Aarhus Domkirke",
-      image: `${aarhusdomkirkeImage}`,
+      title: "CityCard",
+      image: `${image}`,
       slug: "Aarhus"
     },
     {
       id: 3,
-      city: "Aalborg",
-      name: "Aalborg Zoo",
-      image: `${zooImage}`,
+      title: "Turistinfo",
+      image: `${image}`,
       slug: "Aarhus"
     },
     {
       id: 4,
-      city: "Odense",
-      name: "H.C Andersens Barndomshjem",
-      image: `${hcaImage}`,
+      title: "FAQ",
+      image: `${image}`,
       slug: "Aarhus"
     }
   ];
 
   return (
-    <section>
+    <section className='smallSwiper'>
       <Swiper       
-        spaceBetween={20}
-        slidesPerView={1.15}
+        spaceBetween={15}
+        slidesPerView={2}
         centeredSlides={true}
         grabCursor={true}
         onSlideChange={() => console.log("slide change")}
@@ -72,8 +66,8 @@ export default function LandingSwiper() {
         breakpoints={{
           // when window width is >= 1px
           1: {
-            slidesPerView: 1.2,
-            initialSlide: 0,
+            slidesPerView: "auto",
+            initialSlide: 1,
           },
           // when window width is >= 768px
           960: {
@@ -82,7 +76,7 @@ export default function LandingSwiper() {
           },
       }}>
 
-        {slideData.map(({id, city, name, image, slug}) => 
+        {slideData.map(({id, title, image, slug}) => 
           <SwiperSlide  
             style={{
               backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9248074229691877) 6%, rgba(0,0,0,0) 100%), url(${image})`,
@@ -90,19 +84,15 @@ export default function LandingSwiper() {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               cursor: "pointer",
-              outline: "3px solid #FFFFFF",
-              outlineOffset: "-12px"
+              backgroundColor: "none"
             }}
-            onClick={() => navigate("/city/" + slug)}
             key={id}
+            onClick={() => navigate("/city/" + slug)}
+            className="smallSwiper"
           >
-            <div className="font-visitdkBold flex flex-col justify-between px-2 py-2 w-full">
-              <div className="flex self-end drop-shadow-lg">
-                <BriefcaseIcon className="h-8 w-8"/> 
-              </div>
+            <div className="font-visitdkBold flex flex-col justify-center items-center px-2 py-2 w-full">
               <div className="flex-col flex gap-1">
-                <h3 className="text-2xl">{name}</h3>
-                <p className="text-l">{'\u2126'}    {city}</p>
+                <h3 className="text-2xl">{title}</h3>
               </div>  
             </div>
         </SwiperSlide>

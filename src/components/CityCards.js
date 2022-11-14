@@ -6,7 +6,7 @@ import Aalborgcity from "../assets/images/aalborg.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
-export default function Citycard(){
+export default function CityCards(){
     const navigate = useNavigate();
     // aarhus is the only slug because it's the only data we have atm
     // makes the site dynamic, so fetching is available through the slug ID for the city clicked
@@ -37,8 +37,8 @@ export default function Citycard(){
         }
       ];
     return(
-        <section className="px-6">
-            <div className="pb-6">
+        <section className="px-6 py-8">
+            <div className="pb-4">
                 <h3 className="font-visitdkBold text-2xl text-primaryBlue">Hvor vil du hen?</h3>
             </div>
             <div className="w-full grid grid-cols-2 gap-3 font-visitdkSemiBold">
