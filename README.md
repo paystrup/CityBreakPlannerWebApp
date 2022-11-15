@@ -1,5 +1,5 @@
 # City Break Planner Web App
-**Digital agency, 3. sem - EAAA (Business Academy Aarhus) Multimediedesign**
+###### Digital agency, 3. sem - EAAA (Business Academy Aarhus) Multimediedesign
 
 A project by VisitDenmark in cooperation with Danish Business Academies
 
