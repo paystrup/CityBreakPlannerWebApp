@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import image from "../assets/images/smukfest.jpeg";
 import UpcomingTrip from "../components/UpcomingTrip"
 import PreviousTrip from "../components/PreviousTrips"
+import avatar1 from "../assets/images/avatar1.png"
 
 
 export default function MyTripsOverview() {
@@ -14,7 +14,7 @@ export default function MyTripsOverview() {
         <div className="flex justify-between items-center">
             <h2 className='font-visitdkBold text-2xl text-primaryBlue'>Mine Ture</h2>
             <div className="w-6 h-6 rounded-full" style={{
-                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${image})`,
+                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar1})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

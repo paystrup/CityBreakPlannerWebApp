@@ -191,12 +191,15 @@ code {
 .search input{
   background: transparent;
   border: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid var(--primaryBlue);
   width: 100%;
   padding-bottom: 10px;
 }
 
-
+.soeg form {
+  display: flex;
+  
+}
 
 .buttonsSelected {
   min-height: 15px;

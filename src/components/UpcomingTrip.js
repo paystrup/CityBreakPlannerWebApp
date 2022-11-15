@@ -1,7 +1,10 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import waves from "../assets/images/waves.jpg";
 import sand from "../assets/images/sand.jpg";
-import avatar from "../assets/images/"
+import avatar1 from "../assets/images/avatar1.png"
+import avatar2 from "../assets/images/avatar2.png"
+import avatar3 from "../assets/images/avatar3.png"
+import avatar4 from "../assets/images/avatar4.png"
 
 
 
@@ -33,7 +36,7 @@ export default function UpcommingTrip() {
                             <p className="font-visitdkBold text-l">{'\u2126'} Aarhus <span className="font-visitdk text-l">med</span></p> 
                             <div className="h-5 flex flex-row-reverse">
                                 <div className="w-5 h-5 rounded-full border border-secondaryBlue-100" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${waves})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar1})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",
@@ -41,7 +44,7 @@ export default function UpcommingTrip() {
                                     }}>
                                 </div>
                                 <div className="w-5 h-5 rounded-full border border-secondaryBlue-100 avatars-trips" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${waves})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar2})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",
@@ -49,7 +52,7 @@ export default function UpcommingTrip() {
                                     }}>
                                 </div>
                                 <div className="w-5 h-5 rounded-full border border-secondaryBlue-100 avatars-trips" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${waves})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar3})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",
@@ -91,7 +94,7 @@ export default function UpcommingTrip() {
                             <p className="font-visitdkBold text-l">{'\u2126'} Odense <span className="font-visitdk text-l">med</span></p> 
                             <div className="h-5 flex flex-row-reverse">
                                 <div className="w-5 h-5 rounded-full border border-secondaryYellow-100" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${sand})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar4})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",
@@ -99,7 +102,7 @@ export default function UpcommingTrip() {
                                     }}>
                                 </div>
                                 <div className="w-5 h-5 rounded-full border border-secondaryYellow-100 avatars-trips" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${sand})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar2})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",

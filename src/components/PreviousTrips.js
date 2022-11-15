@@ -1,5 +1,7 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import forest from "../assets/images/forest.jpg";
+import avatar3 from "../assets/images/avatar3.png"
+import avatar2 from "../assets/images/avatar2.png"
 
 
 
@@ -31,7 +33,7 @@ export default function PreviousTrip() {
                             <p className="font-visitdkBold text-l">{'\u2126'} København <span className="font-visitdk text-l">med</span></p> 
                             <div className="h-5 flex flex-row-reverse">
                                 <div className="w-5 h-5 rounded-full border border-secondaryGreen-100" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${forest})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar3})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",
@@ -39,7 +41,7 @@ export default function PreviousTrip() {
                                     }}>
                                 </div>
                                 <div className="w-5 h-5 rounded-full border border-secondaryGreen-100 avatars-trips" style={{
-                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${forest})`,
+                                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${avatar2})`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                     backgroundRepeat: "no-repeat",
