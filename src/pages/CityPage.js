@@ -4,6 +4,10 @@ import CityPageHeader from "../components/CityPageHeader";
 import CitySwiper from "../components/CitySwiper";
 import CityPageExplore from "../components/CityPageExplore";
 import RestaurantTeaser from "../components/RestaurantTeaser";
+import SeasonCards from "../components/SeasonCards";
+import WhereWhen from "../components/LandingSmallCarousel"
+import CityPageRome from "../components/CityPageRome"
+import CityPageEvents from "../components/CityPageEvents"
 
 export default function CityPage() {
     const [cityData, setCityData] = useState([]);
@@ -30,8 +34,17 @@ export default function CityPage() {
         <div>
             <CityPageHeader />
             <CitySwiper />
+            <SeasonCards />
             <CityPageExplore />
             <RestaurantTeaser citySlug={slug}/>
+            <section className='py-8'>
+            <h2 className='text-2xl font-visitdkBold px-6 pb-4 text-primaryBlue'>
+                Hvor, hvad og hvordan?
+            </h2>
+            <WhereWhen />
+        </section>
+            <CityPageRome />
+            <CityPageEvents/>
         </div>
     )
 }

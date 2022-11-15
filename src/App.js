@@ -10,6 +10,7 @@ import SearchPage from './pages/SearchPage';
 import CityPage from './pages/CityPage';
 import Restaurantpage from './pages/Restaurantpage';
 import { useState } from "react";
+import ActivityPage from './pages/ActivityPage';
 
 function App() {
   // state for loading animation
@@ -33,6 +34,7 @@ function App() {
           <Route path="/trips" element={<MyTrips/>} />
           <Route path="/city/:slug" element={<CityPage/>} />
           <Route path="/city/:slug/restaurants" element={<Restaurantpage/>} />
+          <Route path="/city/Aarhus/restaurants/:Id" element={<ActivityPage/>} exact={true}/>
           <Route path="/search" element={<SearchPage/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

@@ -1,29 +1,15 @@
+import React from 'react'
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import imagePlaceholder from "../assets/images/placeholder.png";
-import imagePlaceholder2 from "../assets/images/placeholder1.jpg";
-import imagePlaceholder3 from "../assets/images/placeholder2.jpg";
-import imagePlaceholder4 from "../assets/images/placeholder3.jpg";
-import imagePlaceholder5 from "../assets/images/placeholder4.jpg";
-import { BriefcaseIcon } from "@heroicons/react/24/outline"
+import { useParams } from "react-router-dom";
+import imagePlaceholder2 from "../assets/images/placeholder1.jpg"
 
-export default function RestaurantSektion() {
+export default function ActivityPage() {
     const [places, setPlaces] = useState([]);
     const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
-    const [visible, setVisible] = useState(5);
 
-    // show more btn adds 4 more articles by adding 4 to prev value
-    const showMoreRestaurants = () => {
-    setVisible((prevValue) => prevValue + 10);
-    };
-
-    // randomized placeholder, so content won't be repetitive
-    // JSON data has a lot of empty image data ... temp fix
-    const getRandomPlaceholder = () => {
-        const randomImg = ["imagePlaceholder"]
-        return randomImg[~~(Math.random() * randomImg.length)]
-    }
+    const params = useParams();
+    console.log(params); //Returns the slug-name of the url you're navigated to
+    const activityId = params.id; // and the ID
 
     useEffect(() => {
         async function getPlaces()
@@ -36,10 +22,10 @@ export default function RestaurantSektion() {
            try{
                 for (var i = 0; i < data.length; i++) {
                 var place = data[i];
-                if(place.Category.Id == '63')
+                if(place.Id == activityId)
                 {
                     // place.MainCategory.Id == '62'
-                    // console.log(place.Name + ' ' + place.MainCategory.Name);
+                    console.log(place.Name + ' ' + place.MainCategory.Name);
                     filteredrest.push(place)
                 }
             }
@@ -51,7 +37,7 @@ export default function RestaurantSektion() {
             setLoading(false);
         }
         getPlaces();
-    }, []);
+    }, [activityId]);
 
     return (
         <section className="page py-8 px-6 pb-52 font-visitdk">
@@ -66,11 +52,11 @@ export default function RestaurantSektion() {
             }
 
             <section className="grid-container flex flex-col gap-12 pb-10">
-                {places.slice(0, visible).map(({Id, Name, Descriptions, Files}) =>
+                {places.map(({Id, Name, Descriptions, Files}) =>
                     <div
                         className="flex flex-col gap-2"
                         key={Id}
-                        onClick={() => navigate("/city/Aarhus/restaurants/" + Id)}
+                        
                     >
                         <div
                             className="h-44 w-full"
@@ -83,34 +69,14 @@ export default function RestaurantSektion() {
                                 outline: "3px solid #FFFFFF",
                                 outlineOffset: "-12px"
                             }} 
-                        >
-                        <div className="font-visitdkBold flex flex-col justify-between px-5 py-5 w-full">
-                            <div className="flex self-end drop-shadow-lg">
-                                <BriefcaseIcon className="h-8 w-8 text-white"/> 
-                            </div>
-                </div>
-                            
+                        >   
                         </div>
                         
                         <h2 className="font-visitdkBold text-2xl text-primaryBlue">{Name}</h2>
                         <p className="restaurantDesc font-visitdk text-ellipsis truncate">{Descriptions[0].Text}</p>
                     </div>
                 )}
-            </section>
-
-            {!loading &&
-                (
-                    <div className="flex items-center justify-center">
-                        <button 
-                            className="bg-secondaryPink text-primaryBlue w-2/4 px-5 py-3" 
-                            onClick={showMoreRestaurants}
-                        >
-                            Indlæs flere
-                        </button>
-                    </div>
-                )
-            }
- 
+            </section> 
         </section>
-    );
+    )
 }

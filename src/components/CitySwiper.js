@@ -60,12 +60,12 @@ export default function CitySwiper() {
   ];
 
   return (
-    <>
+    <section className="citySwiper pb-8">
         <h2 className="py-8 px-6 font-visitdkBold text-2xl text-primaryBlue">Top attraktioner</h2>
         <Swiper       
             spaceBetween={12}
             slidesPerView={1.15}
-            centeredSlides={true}
+            // centeredSlides={true}
             grabCursor={true}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
@@ -117,6 +117,6 @@ export default function CitySwiper() {
         )}
             
         </Swiper>
-    </>
+    </section>
   );
 }
