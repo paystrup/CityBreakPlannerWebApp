@@ -28,7 +28,7 @@ export default function CityPage() {
         }
         // Complete the async
         getData();
-    }, [slug]);
+    }, [params, cityData]);
 
     return (
         <div className="xl:bg-white xl:min-h-screen">
@@ -44,7 +44,7 @@ export default function CityPage() {
                 <WhereWhen />
             </section>
             <CityPageRome />
-            <CityPageEvents/>
+            <CityPageEvents citySlug={slug}/>
         </div>
     )
 }

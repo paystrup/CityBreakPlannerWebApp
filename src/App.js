@@ -11,6 +11,7 @@ import CityPage from './pages/CityPage';
 import Restaurantpage from './pages/Restaurantpage';
 import { useState } from "react";
 import ActivityPage from './pages/ActivityPage';
+import EventPage from './pages/EventPage';
 
 function App() {
   // state for loading animation
@@ -35,6 +36,8 @@ function App() {
             <Route path="/trips" element={<MyTrips/>} />
             <Route path="/city/:slug" element={<CityPage/>} />
             <Route path="/city/:slug/restaurants" element={<Restaurantpage/>} />
+            <Route path="/city/:slug/events" element={<EventPage />} />
+            <Route path="/city/Aarhus/events/:Id" element={<ActivityPage/>} exact={true}/>
             <Route path="/city/Aarhus/restaurants/:Id" element={<ActivityPage/>} exact={true}/>
             <Route path="/search" element={<SearchPage/>} />
             <Route path="*" element={<Navigate to="/" />} />

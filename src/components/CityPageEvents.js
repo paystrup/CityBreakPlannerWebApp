@@ -1,22 +1,24 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import image from "../assets/images/smukfest.jpeg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 
-export default function CityPageEvents () {
+export default function CityPageEvents ({ citySlug }) {
+    const navigate = useNavigate();
+
   return (
     <section className='pt-4 px-6 pb-36'>
-
-
         <div className="pb-4">
             <p className='font-visitdkBold text-2xl text-primaryBlue'>Det sker i Aarhus</p> 
         </div>
-        <div className='w-full h-300 relative mb-8'>
+        <div className='w-full h-300 relative mb-8 cursor-pointer'
+            onClick={() => navigate("/city/" + citySlug + "/events")}
+        >
             <div className="w-full h-52" style={{
                 backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${image})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                cursor: "pointer",
+                backgroundRepeat: "no-repeat"
             }}>
             </div>
 

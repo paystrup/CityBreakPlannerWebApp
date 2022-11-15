@@ -42,7 +42,7 @@ export default function ActivityPage() {
             setLoading(false);
         }
         getPlaces();
-    }, [activityId]);
+    }, [params, activityId]);
 
     return (
         <section className="page pb-28 font-visitdk bg-white xl:min-h-screen">

@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 
 export default function RestaurantTeaser({citySlug}) {
     const navigate = useNavigate();
-    // 
+
     return (
         <section className='py-8 px-6 mb-8'>
             <p className='font-visitdkBold text-2xl text-primaryBlue pb-6'>Restauranter</p> 
