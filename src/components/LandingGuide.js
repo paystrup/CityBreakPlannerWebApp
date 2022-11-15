@@ -5,11 +5,10 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 export default function LandingGuide () {
   return (
     <section className='py-8 px-6 pb-20'>
-
-
         <div className="pb-4">
             <p className='font-visitdkBold text-2xl text-primaryBlue'>Online Turistguide</p> 
         </div>
+        
         <div className='w-full h-300 relative mb-8'>
             <div className="w-full h-52" style={{
                 backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6) 6%, rgba(0,0,0,0) 100%), url(${image})`,
@@ -27,7 +26,7 @@ export default function LandingGuide () {
                     </p>
 
                     <p className='font-visitdk text-lg'>
-                        Hent vores online guide og dyk ned i smukke Aarhus
+                        Hent vores guide og dyk ned i smukke Danmark.
                     </p>
                     
                     <div className='flex self-end'>

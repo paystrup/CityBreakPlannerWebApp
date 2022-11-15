@@ -17,6 +17,7 @@ code {
 /* VARIABLES */
 :root {
   --primaryRed: #E70013; 
+  --primaryBlue: #022B52;
 }
 
 /* ------------ FONT IMPORTS FOR TAILWIND - ADDED IN TAILWIND.CONFIG.JS */
@@ -145,8 +146,103 @@ code {
   max-width: 60ch;
 }
 
+/* MAPBOX */
+.map-container {
+  width: 100%;
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 3 !important;
+  padding: 6px;
+  font-weight: bold;
+}
+
+/* MAPBOX */  
+#map{
+  width: 100%;
+  height: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* Avatars in my trips */
+.avatars-trips{
+  margin-right: -10px;
+}
+
+.horizontalline{
+  color: #CED2D3;
+}
+
+/*-------Categories-------*/
+
+.ExploreImages {
+  padding-bottom: 1.5rem;
+}
+
+.search input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+  padding-bottom: 10px;
+}
 
 
 
+.buttonsSelected {
+  min-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--primaryBlue) !important; 
+}
 
+.buttonschange {
+  min-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryBlue) !important;
+  background-color: #CED2D3 !important;
+}
 
+.swiperExplore .swiper-slide {
+  min-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--primaryBlue); 
+}
+
+.swiperExplore .swiper-slide .swiper-slide-active {
+  margin: 0;
+}
+
+.swiperExplore .swiper-slide:first-child{
+  margin-left: 1.5rem;
+}
+
+/* plusbutton */
+.button-plus{
+  position: fixed;
+  right: 2vw;
+  bottom: 100px;
+}
+
+.underline-button-text{
+  position:relative;
+  padding-bottom:14px;
+  display:inline-block;
+  border-bottom:2px solid var(--primaryBlue);
+}  

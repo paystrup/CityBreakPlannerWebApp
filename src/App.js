@@ -26,19 +26,21 @@ function App() {
 
   return (
     !loading && (
-      <main>
-        <ScrollToTop />
-        <NavTopBar />
-        <Routes>
-          <Route path="/" element={<LandingPage/>} />
-          <Route path="/trips" element={<MyTrips/>} />
-          <Route path="/city/:slug" element={<CityPage/>} />
-          <Route path="/city/:slug/restaurants" element={<Restaurantpage/>} />
-          <Route path="/city/Aarhus/restaurants/:Id" element={<ActivityPage/>} exact={true}/>
-          <Route path="/search" element={<SearchPage/>} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-        <BottomBar />
+      <main className='xl:bg-black xl:min-h-screen'>
+        <div className='xl:max-w-sm xl:m-auto xl:shadow-md'>
+          <ScrollToTop />
+          <NavTopBar />
+          <Routes>
+            <Route path="/" element={<LandingPage/>} />
+            <Route path="/trips" element={<MyTrips/>} />
+            <Route path="/city/:slug" element={<CityPage/>} />
+            <Route path="/city/:slug/restaurants" element={<Restaurantpage/>} />
+            <Route path="/city/Aarhus/restaurants/:Id" element={<ActivityPage/>} exact={true}/>
+            <Route path="/search" element={<SearchPage/>} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <BottomBar />
+        </div>
       </main>
     )
   );

@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 
 export default function CityPageEvents () {
   return (
-    <section className='py-8 px-6 pb-20'>
+    <section className='pt-4 px-6 pb-36'>
 
 
         <div className="pb-4">

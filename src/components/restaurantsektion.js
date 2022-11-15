@@ -13,9 +13,9 @@ export default function RestaurantSektion() {
     const navigate = useNavigate();
     const [visible, setVisible] = useState(5);
 
-    // show more btn adds 4 more articles by adding 4 to prev value
+    // show more btn adds 8 more restaurants to the visible array
     const showMoreRestaurants = () => {
-    setVisible((prevValue) => prevValue + 10);
+    setVisible((prevValue) => prevValue + 8);
     };
 
     // randomized placeholder, so content won't be repetitive
@@ -54,7 +54,7 @@ export default function RestaurantSektion() {
     }, []);
 
     return (
-        <section className="page py-8 px-6 pb-52 font-visitdk">
+        <section className="page py-8 px-6 pb-32 font-visitdk">
             {loading &&
                 <div className="flex flex-col justify-center items-center">
                     <svg className="animate-spin mb-8 h-10 w-10 text-primaryBlue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -65,7 +65,11 @@ export default function RestaurantSektion() {
                 </div>
             }
 
-            <section className="grid-container flex flex-col gap-12 pb-10">
+            {!loading &&
+                <h2 className="font-visitdkBold text-lg text-primaryBlue mb-4">I alt {places.length} steder</h2>
+            }
+
+            <section className="grid-container flex flex-col gap-12 pb-12">
                 {places.slice(0, visible).map(({Id, Name, Descriptions, Files}) =>
                     <div
                         className="flex flex-col gap-2"
@@ -93,7 +97,7 @@ export default function RestaurantSektion() {
                         </div>
                         
                         <h2 className="font-visitdkBold text-2xl text-primaryBlue">{Name}</h2>
-                        <p className="restaurantDesc font-visitdk text-ellipsis truncate">{Descriptions[0].Text}</p>
+                        <p className="restaurantDesc font-visitdk line-clamp-3">{Descriptions[0].Text}</p>
                     </div>
                 )}
             </section>
@@ -102,7 +106,7 @@ export default function RestaurantSektion() {
                 (
                     <div className="flex items-center justify-center">
                         <button 
-                            className="bg-secondaryPink text-primaryBlue w-2/4 px-5 py-3" 
+                            className="bg-secondaryPink text-primaryBlue w-3/4 px-5 py-3 font-visitdkBold" 
                             onClick={showMoreRestaurants}
                         >
                             Indlæs flere

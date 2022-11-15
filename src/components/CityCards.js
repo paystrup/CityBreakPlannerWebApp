@@ -36,6 +36,7 @@ export default function CityCards(){
           slug: "Aarhus"
         }
       ];
+      
     return(
         <section className="px-6 py-8">
             <div className="pb-4">

@@ -75,11 +75,11 @@ export default function LandingSwiper() {
             slidesPerView: 1.15,
             initialSlide: 0,
           },
-          // when window width is >= 768px
-          960: {
-            slidesPerView: 2,
-            initialSlide: 1,
-          },
+          // // when window width is >= 768px
+          // 960: {
+          //   slidesPerView: 2,
+          //   initialSlide: 1,
+          // },
       }}>
 
         {slideData.map(({id, city, name, image, slug}) => 

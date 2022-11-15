@@ -22,7 +22,7 @@ export default function LandingPage() {
 
 
   return (
-    <section className='bg-white pb-20'>
+    <section className='bg-white pb-20 xl:min-h-screen'>
         <LandingHeader />
         <CityCards />
 

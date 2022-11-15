@@ -3,7 +3,7 @@ import image from "../assets/images/restaurants2.png";;
 
 export default function RestaurantHeader () {
   return (
-    <section className='py-8 px-6'>
+    <section className='pt-4 pb-8 px-6'>
         <div className='w-full h-300 relative mb-8'>
             <div className="w-full h-52" style={{
                 backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.3) 6%, rgba(0,0,0,0) 100%), url(${image})`,

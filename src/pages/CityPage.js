@@ -31,18 +31,18 @@ export default function CityPage() {
     }, [slug]);
 
     return (
-        <div>
+        <div className="xl:bg-white xl:min-h-screen">
             <CityPageHeader />
             <CitySwiper />
             <SeasonCards />
             <CityPageExplore />
             <RestaurantTeaser citySlug={slug}/>
             <section className='py-8'>
-            <h2 className='text-2xl font-visitdkBold px-6 pb-4 text-primaryBlue'>
-                Hvor, hvad og hvordan?
-            </h2>
-            <WhereWhen />
-        </section>
+                <h2 className='text-2xl font-visitdkBold px-6 pb-4 text-primaryBlue'>
+                    Hvor, hvad og hvordan?
+                </h2>
+                <WhereWhen />
+            </section>
             <CityPageRome />
             <CityPageEvents/>
         </div>

@@ -35,7 +35,7 @@ export default function NavTopBar() {
     }, [language]);
 
     return (
-        <nav className='px-6 py-5 flex justify-between items-center'>
+        <nav className='px-6 py-5 flex justify-between items-center bg-white'>
             <Link to="/">
                 <img src={logo} alt="Visit Denmark Logo" className='w-2/4'></img>
             </Link>

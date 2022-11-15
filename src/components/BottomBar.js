@@ -13,7 +13,7 @@ import {
 // new styling when user is navigated to the url assigned
 export default function BottomBar() {
   return (
-    <div className="fixed w-full bottom-0 left-0 px-10 pb-5 pt-5 font-visitdkMedium text-xs xl:hidden bg-white z-10">
+    <nav className="fixed w-full bottom-0 left-0 px-10 pb-5 pt-5 font-visitdkMedium text-xs bg-white z-10 xl:max-w-sm xl:left-1/2 xl:-translate-x-1/2">
       <ul className="flex justify-between w-full">
         <li className="text-primaryGray-900">
           <NavLink to="/" end className='flex flex-col items-center gap-1'>
@@ -37,6 +37,6 @@ export default function BottomBar() {
         </li>
         
       </ul>
-    </div>
+    </nav>
   );
 }

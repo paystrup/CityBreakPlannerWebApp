@@ -10,7 +10,10 @@ import { Keyboard, Mousewheel, Pagination } from "swiper";
 // images for cards
 import arosImage from "../assets/images/aarhus.jpeg"
 import gamleByImage from "../assets/images/dengamleby.webp"
-import hcaImage from "../assets/images/hcandersen.jpg"
+import moesgaardImage from "../assets/images/moesgaard.jpeg"
+import tivoliImage from "../assets/images/Copenhagen-Tivoli-Gardens-merry-go-round-winter-small.jpg"
+import broImage from "../assets/images/uendeligebro.jpg"
+import rooftopImage from "../assets/images/sallingroof.webp"
 
 import { BriefcaseIcon } from "@heroicons/react/24/outline"
 import { useNavigate } from "react-router-dom";
@@ -35,26 +38,26 @@ export default function CitySwiper() {
     {
       id: 3,
       title: "Moesgaard Museum",
-      image: `${gamleByImage}`,
+      image: `${moesgaardImage}`,
       slug: "Aarhus"
     },
     {
       id: 4,
       title: "Tivoli Friheden",
-      image: `${hcaImage}`,
+      image: `${tivoliImage}`,
       slug: "Aarhus"
     },
     {
       id: 5,
       title: "Den uendelige bro",
-      image: `${hcaImage}`,
+      image: `${broImage}`,
       slug: "Aarhus"
     }
     ,
     {
       id: 5,
       title: "Salling Rooftop",
-      image: `${hcaImage}`,
+      image: `${rooftopImage}`,
       slug: "Aarhus"
     }
   ];
@@ -83,12 +86,7 @@ export default function CitySwiper() {
             1: {
                 slidesPerView: 1.2,
                 initialSlide: 0,
-            },
-            // when window width is >= 768px
-            960: {
-                slidesPerView: 2,
-                initialSlide: 1,
-            },
+            }
         }}>
 
             {slideData.map(({id, title, image, slug}) => 
@@ -104,6 +102,7 @@ export default function CitySwiper() {
                 }}
                 onClick={() => navigate("/city/" + slug)}
                 key={id}
+                className="hover:opacity-50 transition-opacity"
             >
                 <div className="font-visitdkBold flex flex-col justify-between px-2 py-2 w-full">
                 <div className="flex self-end drop-shadow-lg">
