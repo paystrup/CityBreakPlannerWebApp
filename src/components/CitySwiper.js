@@ -92,7 +92,7 @@ export default function CitySwiper() {
             {slideData.map(({id, title, image, slug}) => 
             <SwiperSlide  
                 style={{
-                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9248074229691877) 6%, rgba(0,0,0,0) 100%), url(${image})`,
+                backgroundImage: `linear-gradient(90deg, rgba(255,255,255,0) 88%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%), url(${image})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
